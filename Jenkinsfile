@@ -17,5 +17,8 @@ pipeline{
                 }
 
             }
+        stage('tester') {
+            steps{
+                echo"******I have to test my new application******"
         }
 }
