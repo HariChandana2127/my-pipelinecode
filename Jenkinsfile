@@ -1,24 +1,19 @@
 pipeline{
-    agent any 
-    stages {
-        stage('Build') {
-            steps {
-                echo "*****I want to build know*****"
-            } 
-        }
-        stage('Test') {
+    agent any
+    environement{
+        course="docker & k8s"
+        name="hari"
+    }
+    stages{
+        stage('Build'){
+            environment{
+                cloud="GCP"
+            }
             steps{
-                echo"****I want to test my application****"
+                echo "welcome ${name}"
+                echo "you enrolled in ${course}"
+                echo "you certified in ${cloud}"
             }
         }
-            stage('Deploy') {
-                steps{
-                    echo"****I want to deploy my application****"
-                }
-
-            }
-        stage('tester') {
-            steps{
-                echo"******I have to test my new application******"
-        }
+    }
 }
