@@ -17,5 +17,8 @@ pipeline{
                 }
 
             }
+           stage('develop') {
+               steps{
+                   echo "****I have to develop an application****"
         }
 }
