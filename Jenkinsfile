@@ -1,12 +1,12 @@
-pipeline{
+pipeline {
     agent any
-    environement{
+    environement {
         course="docker & k8s"
         name="hari"
     }
-    stages{
-        stage('Build'){
-            environment{
+    stages {
+        stage('Build') {
+            environment {
                 cloud="GCP"
             }
             steps{
