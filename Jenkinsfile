@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environement {
+    environment {
         course = "docker & k8s"
         name = "hari"
     }
