@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environement {
-        course="docker & k8s"
-        name="hari"
+        course = "docker & k8s"
+        name = "hari"
     }
     stages {
         stage('Build') {
             environment {
-                cloud="GCP"
+                cloud = "GCP"
             }
             steps{
                 echo "welcome ${name}"
