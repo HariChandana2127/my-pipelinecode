@@ -19,6 +19,6 @@ pipeline{
             }
            stage('develop') {
                steps{
-                   echo "****I have to develop an application****"
+                   echo "****I have to deevelop an application****"
         }
 }
