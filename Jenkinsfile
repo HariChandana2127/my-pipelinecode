@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    environment {
+    environment{
         DEPLOY_TO = 'Production'
     }
     stages {
-        stage('Deploytoproduction')
+        stage('ProdDeploy')
         when {
-            environment name: DEPLOY_TO, Value: Production
+            environment name: 'DEPLOY_TO', Value: 'Production'
         }
         steps{
             echo "deployment is sucess"
