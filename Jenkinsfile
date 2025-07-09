@@ -1,24 +1,15 @@
 pipeline{
-    agent any 
-    stages {
-        stage('Build') {
-            steps {
-                echo "*****I want to build know*****"
-            } 
-        }
-        stage('Test') {
-            steps{
-                echo"****I want to test my application****"
-            }
-        }
-            stage('Deploy') {
+    agent any
+    environment{
+        GITHUB_CREDS =credintials ('github')
+        stages{
+            stage('Build'){
                 steps{
-                    echo"****I want to deploy my application****"
+                    echo "my git hub credintials ***"
+                    echo "my username = $ {GITHUB_CREDS_USR}"
+                    echo "my password = $ {GITHUB_CREDS_PSW}"
                 }
-
             }
-           stage('develop') {
-               steps{
-                   echo "****I have to deevelop an application****"
-        }
+        }  
+                
 }
