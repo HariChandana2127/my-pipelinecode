@@ -6,8 +6,8 @@ pipeline{
             stage('Build'){
                 steps{
                     echo "my git hub credintials ***"
-                    echo "my username : $ {GITHUB_CREDS_USR}"
-                    echo "my password : $ {GITHUB_CREDS_PSW}"
+                    echo "my username : ${GITHUB_CREDS_USR}"
+                    echo "my password : ${GITHUB_CREDS_PSW}"
                 }
             }
         }  
