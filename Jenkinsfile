@@ -1,9 +1,9 @@
-pipeline{
+pipeline {
     agent any
-    environment{
+    environment {
         DEPLOY_TO = 'Production'
     }
-    stages{
+    stages {
         stage('Deploytoproduction')
         when {
             environment name: DEPLOY_TO, Value: Production
