@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        GITHUB_CREDS =credintials ('github')
+        GITHUB_CREDS : credintials ('github')
         stages{
             stage('Build'){
                 steps{
