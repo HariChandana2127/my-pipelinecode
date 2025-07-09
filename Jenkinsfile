@@ -1,16 +1,16 @@
 pipeline{
     agent any
+    
     environment{
-        GITHUB_CREDS : credintials ('github')
+        GITHUB_CREDS = credintials ('github')
+    }
         stages{
-            stage('Build'){
+            stage('Build') {
                 steps{
                     echo "my git hub credintials ***"
-                    echo "my username : ${GITHUB_CREDS_USR}"
-                    echo "my password : ${GITHUB_CREDS_PSW}"
+                    echo "my username: ${GITHUB_CREDS_USR}"
+                    echo "my password: ${GITHUB_CREDS_PSW}"
                 }
             }
         }  
-                
-}
-}
+    }
