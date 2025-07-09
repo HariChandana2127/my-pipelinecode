@@ -1,20 +1,16 @@
-pipeline {
+pipeline{
     agent any
-    environment {
-        course = "docker & k8s"
-        name = "hari"
+    environment{
+        DEPLOY_TO = 'Production'
     }
-    stages {
-        stage('Build') {
-            environment {
-                cloud = "GCP"
-            }
-            steps{
-                echo "welcome ${name}"
-                echo "you enrolled in ${course}"
-                echo "you certified in ${cloud}"
-                echo "my branch name is ${env.BRANCH_NAME}"
-            }
+    stages{
+        stage('Deploytoproduction')
+        when {
+            environment name: DEPLOY_TO, Value: Production
+        }
+        steps{
+            echo "deployment is sucess"
         }
     }
 }
+            
